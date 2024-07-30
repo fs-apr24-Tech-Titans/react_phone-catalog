@@ -25,3 +25,4 @@ export const FavAndCartBlock: React.FC = () => {
     </div>
   );
 };
+// 1
