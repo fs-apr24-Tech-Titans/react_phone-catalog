@@ -12,7 +12,7 @@
    border-radius: 16px;
    margin-bottom: 16px;
 
-   
+
 
    @include on-tablet {
       gap: 24px;
@@ -20,17 +20,18 @@
       justify-content: space-between;
    }
 
-      &:hover {
-         background-color: #FAFBFC;
-      }
+   &:hover {
+      background-color: var(--color-hover);
+   }
 }
+
 .mainContainer {
    display: flex;
    width: 100%;
    align-items: center;
    gap: 16px;
-  
-   
+
+
 
 }
 
@@ -50,6 +51,10 @@
 .deleteButtonIcon {
    width: 16px;
    height: 16px;
+}
+
+.productName{
+   @include body-text;
 }
 
 .productImage {
@@ -122,6 +127,9 @@
    border: none;
    background: transparent;
 }
+.quantityValue{
+@include body-text;
+}
 
 .quantityValueContainer {
    display: flex;
@@ -132,10 +140,5 @@
 }
 
 .price {
-   font-family: Mont, sans-serif;
-      font-size: 22px;
-      line-height: 31.8px;
-      letter-spacing: 0;
-      font-weight: 800;
-      color: var(--color-primary);
+  @include title-3;
 }

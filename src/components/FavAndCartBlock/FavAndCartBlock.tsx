@@ -1,5 +1,6 @@
 import React from 'react';
 import './FavAndCartBlock.scss';
+import { Link } from 'react-router-dom';
 
 export const FavAndCartBlock: React.FC = () => {
   return (
@@ -11,9 +12,9 @@ export const FavAndCartBlock: React.FC = () => {
       </div>
 
       <div className="info-buttons__icon info-buttons__icon--cart">
-        <a className='info-buttons__link' href="#">
+        <Link className='info-buttons__link' to="/cartPage">
           <img src="/img/icons/shopping-bag.svg" alt="" />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from 'react';
 import './ProductCard.scss';
 import { Link } from 'react-router-dom';
-
 import { Product } from '../../types';
-
+import { useAppContext } from '../../context/AppContext';
 import { MainButton } from '../MainButton';
 import { AddToFavButton } from '../AddToFavButton';
 
@@ -12,19 +11,23 @@ interface Props {
 }
 
 export const ProductCard: React.FC<Props> = ({ product }) => {
-  const {
-    itemId,
-    category,
-    image,
-    name,
-    price,
-    fullPrice,
-    screen,
-    capacity,
-    ram 
-  } = product;
-
-  const URL = `/${category}/${itemId}`;
+   const { itemId,
+      category,
+      image,
+      name,
+      price,
+      fullPrice,
+      screen,
+      capacity,
+      ram } = product;
+   
+      const URL = `/${category}/${itemId}`;
+      
+   const { addToCart } = useAppContext();
+   
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
 
   return (
     <article className="productCard">
@@ -55,7 +58,7 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
       </div>
 
       <div className="productCard__buttons">
-        <MainButton text={'Add to cart'} handler={() => true} />
+        <MainButton text={'Add to cart'} handler={handleAddToCart} />
         <AddToFavButton />
       </div>
     </article>
