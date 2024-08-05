@@ -1,6 +1,7 @@
 .thank-you {
-  padding-top: 50px;
+  padding-block: 50px;
   text-align: center;
+  
 
   @include on-tablet {
     padding-top: 80px;
@@ -12,15 +13,13 @@
   }
 
   &__title {
-    padding-top: 40px;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    padding-block: 40px 20px;
+    @include title-2;
   }
 
   &__message {
     padding-block: 20px;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    @include title-4
   }
 
   &__details {

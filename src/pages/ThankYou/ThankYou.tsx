@@ -16,7 +16,7 @@ export const ThankYou: React.FC = () => {
   return (
     <section className="thank-you">
       <Fade triggerOnce>
-      <img src="/img/order.png" alt="cart-is-empty" className="cartIsEmpty__img" />
+      <img className='thank-you__image' src="/img/order.png" alt="order-img" />
         <h1 className="thank-you__title">Thank You for Your Order, {payerName}!</h1>
         <p className="thank-you__message">
           Your order {orderID} has been placed successfully.
